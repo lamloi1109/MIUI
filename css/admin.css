@@ -7,16 +7,25 @@ h4,
 p {
   margin: 0;
 }
+header{
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-color: #ddd;
+  z-index: 1;
+  padding: 10px;
+}
 .main {
   margin: 30px;
   overflow: hidden;
 }
-header {
-  display: flex;
-  justify-content: end;
+.header--top {
   margin: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  column-gap: 10px;
+  /* background: #000; */
 }
 .header--middle {
   display: flex;
@@ -24,17 +33,12 @@ header {
   background-color: bisque;
 }
 
-.form--check {
+.header--top-form-check {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 5px;
-  margin-bottom: 20px;
 }
-.form-group {
-  display: flex;
-  align-items: center;
-}
+
 button {
   margin: 5px;
 }
@@ -54,7 +58,7 @@ table p {
 
 th {
   position: sticky;
-  top: 0; /* Don't forget this, required for the stickiness */
+  top: 0px; /* Don't forget this, required for the stickiness */
 }
 
 #table-wrapper {
@@ -113,6 +117,22 @@ th {
   justify-content: space-around;
 }
 
+.button--sort-date{
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  gap: 10px;
+  background: #44a0e1;
+  padding: 10px;
+}
+.container{
+  top: 204px;
+  margin-bottom: 100px;
+}
 @media screen and (max-width: 1025px) {
   .main {
     margin: 10px;
@@ -123,21 +143,12 @@ th {
   .form--check {
     flex-direction: column-reverse;
   }
-  .mobile--button {
+  .header--btns {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-content: stretch;
   }
-  .mobile--button-sort-date {
-    display: flex;
-    flex-direction: column;
-  }
-  .mobile--button-sort-date .top {
-    display: flex;
-    align-items: center;
-  }
-
 }
 
 @media screen and (max-width: 769px) {
