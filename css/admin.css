@@ -1,0 +1,243 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+h4,
+p {
+  margin: 0;
+}
+.main {
+  margin: 30px;
+  overflow: hidden;
+}
+header {
+  display: flex;
+  justify-content: end;
+  margin: 10px;
+  align-items: center;
+  column-gap: 10px;
+}
+.header--middle {
+  display: flex;
+  justify-content: center;
+  background-color: bisque;
+}
+
+.form--check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+}
+button {
+  margin: 5px;
+}
+table {
+  text-align: left;
+  position: sticky;
+  top: 0;
+  width: 90%;
+
+}
+table p {
+  word-break: break-all;
+}
+.table-responsive {
+  height: 550px;
+}
+
+th {
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+}
+
+#table-wrapper {
+  position: relative;
+}
+#table-scroll {
+  height: 100px;
+  overflow: auto;
+  margin-top: 20px;
+}
+#table-c table {
+  width: 100%;
+}
+
+#outer {
+  width: 100%;
+  text-align: center;
+}
+.inner {
+  display: inline-block;
+}
+.card .input-group .container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:  auto auto;
+  overflow: hidden;
+}
+.card .input-group .box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  background-color: #DEF7E5;
+  border-radius: 10px;
+  margin: 5px;
+}
+.card .input-group .box .icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+
+}
+.card .input-group .box .icon i{
+  font-size: large;
+}
+.card .input-group .box input {
+  width: 80%;
+  border: 0;
+  outline: none;
+  background: none;
+}
+.card .list-btn{
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 1025px) {
+  .main {
+    margin: 10px;
+  }
+  header {
+    justify-content: end;
+  }
+  .form--check {
+    flex-direction: column-reverse;
+  }
+  .mobile--button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+  .mobile--button-sort-date {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile--button-sort-date .top {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+@media screen and (max-width: 769px) {
+  .form--check {
+    display: grid;
+    justify-content: center;
+  }
+  .form--check .form-group {
+    justify-content: center;
+  }
+  .button--sort-date {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+  }
+  #sbd {
+    grid-column: 1 / 3;
+    grid-row: 2 / 2;
+  }
+  .card .list-btn{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-around;
+  }
+  table {
+    width: 100%;
+    border: 0;
+    table-layout: fixed;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1em;
+    text-align: left;
+  }
+  table td p {
+    font-size: 15px !important;
+    -webkit-text-size-adjust: none !important;
+    text-size-adjust: none;
+    word-break: break-all;
+  }
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-right: 10px;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  header {
+    justify-content: center;
+  }
+
+  header .header--right {
+    display: flex;
+    flex-direction: column;
+  }
+  .form--check {
+    display: block;
+  }
+  .form--check .form-group {
+    justify-content: center;
+  }
+  .form--check .button--sort-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card .input-group .container{
+    display: block;
+  }
+}
