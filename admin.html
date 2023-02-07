@@ -32,7 +32,7 @@
    </head>
    <body>
       <div class="main">
-         <header>
+         <header class="sticky">
             <div class="header--top">
                <div class="header--top-form-check">
                   <input
@@ -56,33 +56,33 @@
                <button type="button" class="btn btn-info" id="UID">UID</button>
                <button type="button" class="btn btn-outline-primary" data-mdb-ripple-color="dark" contentEditable="true" id="credit">Credit</button>
                <button type="button" class="btn btn-outline-warning btn-rounded" data-mdb-ripple-color="dark" id="save">Save</button>
-               <button type="button" class="btn btn-warning btn-rounded" data-mdb-toggle="modal" data-mdb-target="#eventmodal" id="xoaen">Event</button>
+               <button type="button" class="btn btn-warning btn-rounded" data-mdb-toggle="modal" data-mdb-target="#eventmodal" id="xoaen">KEYEDIT</button>
                <button type="button" class="btn btn-danger btn-rounded" id="sum">Null</button>  
                <button type="button" class="btn btn-danger btn-rounded" id="day">Null</button>
             </div>
 
          </header>
+         <div class="container">
+         <table  class="table table-striped table-hover caption-top align-middle rounded">
+         <thead class="table-light" id="thead">
+         <tr>
+         </tr>
+         </thead>
+         <tbody id="table1">
+         </tbody>
+         </table>
+         </div>
 
-
-               <div class="button--sort-date">
+         <div class="button--sort-date">
                   <input class="rounded border border-1" type="date" id="start" style="margin-bottom: 2.5px;" value="">
                   <input class="rounded border border-1" type="date" id="end" style="margin-bottom: 2.5px;" value="">
                   <button type="button" class="btn btn-secondary" id="sbd">Sort</button>
-            </div>   
+         </div>   
 
          </div>
-         <div class="container">
-                        <table  class="table table-striped table-hover caption-top align-middle rounded">
-               <thead class="table-light" id="thead">
-                  <tr>
-                  </tr>
-               </thead>
-               <tbody id="table1">
-               </tbody>
-            </table>
-         </div>
+
       
-      </div>
+   
 
       <!-- Modal -->
       <div class="modal top fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="true">
@@ -235,11 +235,15 @@
          <div class="modal-content">
             <!-- Start your project here-->
                   <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"> <strong>TET</strong> Holiday Event</h5>
+        <h5 class="modal-title" id="exampleModalLabel">KEYEDIT</h5>
         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
       </div>
             <div class="card shadow-0 ">
-               <div class="card-body">                  
+               <div class="card-body">
+                  <div class="nofitication">
+                     <h4>Note</h4>
+                     <p>Only used to modify the key generated from KEYGEN</p>
+                   </div>                  
                   <h5 class="card-title" >Serial infomation</h5>
                   <div class="input-group mb-3">
                      <div class="container">

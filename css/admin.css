@@ -7,25 +7,27 @@ h4,
 p {
   margin: 0;
 }
-header{
+
+.sticky {
   position: fixed;
-  top: 20px;
-  left: 10px;
-  right: 10px;
-  background-color: #ddd;
-  z-index: 1;
+  top: 0px;
   padding: 10px;
+  left: 0px;
+  right: 0px;
+  background-color: #ffffff;
+  z-index: 1;
+  /* display: none; */
 }
+
 .main {
   margin: 30px;
-  overflow: hidden;
+  /* overflow-x: hidden;   */
 }
 .header--top {
   margin: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: #000; */
 }
 .header--middle {
   display: flex;
@@ -44,21 +46,20 @@ button {
 }
 table {
   text-align: left;
-  position: sticky;
-  top: 0;
   width: 90%;
-
 }
 table p {
-  word-break: break-all;
+  word-break: break-all !important;
 }
 .table-responsive {
   height: 550px;
 }
 
 th {
+  position: -webkit-sticky;
   position: sticky;
-  top: 0px; /* Don't forget this, required for the stickiness */
+  top: 130px;
+  padding: 10px;
 }
 
 #table-wrapper {
@@ -80,30 +81,29 @@ th {
 .inner {
   display: inline-block;
 }
-.card .input-group .container{
+.card .input-group .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows:  auto auto;
+  grid-template-rows: auto auto;
   overflow: hidden;
 }
-.card .input-group .box{
+.card .input-group .box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 5px;
   padding: 10px;
-  background-color: #DEF7E5;
+  background-color: #def7e5;
   border-radius: 10px;
   margin: 5px;
 }
-.card .input-group .box .icon{
+.card .input-group .box .icon {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px;
-
 }
-.card .input-group .box .icon i{
+.card .input-group .box .icon i {
   font-size: large;
 }
 .card .input-group .box input {
@@ -112,12 +112,12 @@ th {
   outline: none;
   background: none;
 }
-.card .list-btn{
+.card .list-btn {
   display: flex;
   justify-content: space-around;
 }
 
-.button--sort-date{
+.button--sort-date {
   z-index: 1;
   display: flex;
   justify-content: space-around;
@@ -126,17 +126,24 @@ th {
   left: 10px;
   bottom: 10px;
   gap: 10px;
-  background: #44a0e1;
+  background: #a9cdd2;
   padding: 10px;
+  border-radius: 5px;
 }
-.container{
-  top: 204px;
-  margin-bottom: 100px;
+.main .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
+
+.nofitication {
+  background: #def7e541;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 10px;
+}
+
 @media screen and (max-width: 1025px) {
-  .main {
-    margin: 10px;
-  }
   header {
     justify-content: end;
   }
@@ -152,6 +159,19 @@ th {
 }
 
 @media screen and (max-width: 769px) {
+  .main .container {
+    padding-top: 224px;
+  }
+  header {
+    justify-content: center;
+  }
+  header .header--top {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  header .header--top .header--top-list-btns {
+    display: flex;
+  }
   .form--check {
     display: grid;
     justify-content: center;
@@ -169,7 +189,7 @@ th {
     grid-column: 1 / 3;
     grid-row: 2 / 2;
   }
-  .card .list-btn{
+  .card .list-btn {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
@@ -209,7 +229,6 @@ th {
     text-align: left;
   }
   table td p {
-    font-size: 15px !important;
     -webkit-text-size-adjust: none !important;
     text-size-adjust: none;
     word-break: break-all;
@@ -228,8 +247,11 @@ th {
 }
 
 @media screen and (max-width: 321px) {
-  header {
-    justify-content: center;
+  .main {
+    overflow-x: hidden;
+  }
+  .main .container {
+    padding-top: 300px;
   }
 
   header .header--right {
@@ -248,7 +270,7 @@ th {
     justify-content: center;
     align-items: center;
   }
-  .card .input-group .container{
+  .card .input-group .container {
     display: block;
   }
 }

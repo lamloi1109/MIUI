@@ -129,11 +129,12 @@ function AddItemsToTable(time, random, seria, key) {
   var td3 = document.createElement("td");
   var td4 = document.createElement("td");
 
-  td1.innerHTML += `<h6><p class="badge badge-secondary">${time}</p></h6>`;
-  td2.innerHTML += `<h6><p class="badge badge-info rounded-pill">${random}</p></h6>`;
-  td3.innerHTML += `<h6><p class="badge badge-warning rounded-pill">${seria}</p></h6>`;
-  td4.innerHTML += `<h6><p class="badge badge-success">${key}</p></h6>`;
-  if (time.includes("@gmail.com")) {
+  td1.innerHTML += `<h6><p class='badge badge-secondary'>${time}</p></h6>`;
+  td2.innerHTML += `<h6><p class='badge badge-info rounded-pill'>${random}</p></h6>`;
+  td3.innerHTML += `<h6><p class='badge badge-warning rounded-pill'>${seria}</p></h6>`;
+  td4.innerHTML += `<h6><p class='badge badge-success'> ${key}</p></h6>`;
+  // Add data-label -> Show in mobile (Table)
+  if (time.includes("@")) {
     td1.setAttribute("data-label", "Mail");
     td2.setAttribute("data-label", "Credit");
     td3.setAttribute("data-label", "IsAdmin");
